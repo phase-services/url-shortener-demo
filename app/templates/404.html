@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>URL shortener - Oops, 404...</title>
+    </head>
+
+    <style>
+        body { background-color: whitesmoke; }
+        h1   { color: black; left: 0; line-height: 200px; margin-top: -100px;
+                position: absolute; text-align: center; top: 50%; width: 100%; }
+    </style>
+
+    <body>
+        <h1>404... The page you tried to access could not be found :-(</h1>
+    </body>
+
+    <script>
+        setTimeout(function() {
+            window.location.href = '/';
+        }, 2000);
+    </script>
+</html>
