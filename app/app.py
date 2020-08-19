@@ -47,6 +47,9 @@ def register_path():
     if admin_pwd == None or path_to == None:
         abort(500, description='Invalid parameters provided')
 
+    if path_to[:7] != 'http://' and path_to[:8] != 'https://':
+        abort(400, description='Invalid URL scheme provided')
+
     if admin_pwd != redirect_admin_pwd:
         abort(403, description='Invalid admin password provided')
     
